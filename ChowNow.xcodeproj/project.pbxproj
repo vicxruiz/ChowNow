@@ -10,7 +10,6 @@
 		9878F30C2A56988400DC7850 /* ChowNowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878F30B2A56988400DC7850 /* ChowNowApp.swift */; };
 		9878F3102A56988500DC7850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9878F30F2A56988500DC7850 /* Assets.xcassets */; };
 		9878F3132A56988500DC7850 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9878F3122A56988500DC7850 /* Preview Assets.xcassets */; };
-		9878F31D2A56988600DC7850 /* ChowNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878F31C2A56988600DC7850 /* ChowNowTests.swift */; };
 		9878F3272A56988600DC7850 /* ChowNowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878F3262A56988600DC7850 /* ChowNowUITests.swift */; };
 		9878F3292A56988600DC7850 /* ChowNowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878F3282A56988600DC7850 /* ChowNowUITestsLaunchTests.swift */; };
 		9878F3402A56A38600DC7850 /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878F33F2A56A38600DC7850 /* RestaurantView.swift */; };
@@ -31,6 +30,8 @@
 		98FBB2D02A56E5D800FF00E6 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBB2CF2A56E5D800FF00E6 /* LocationDetailView.swift */; };
 		98FBB2D62A5715D200FF00E6 /* LocationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBB2D52A5715D200FF00E6 /* LocationDetailViewModel.swift */; };
 		98FBB2D82A571F8200FF00E6 /* AnnotationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBB2D72A571F8100FF00E6 /* AnnotationData.swift */; };
+		98FBB2E02A5755E800FF00E6 /* MockRestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBB2DF2A5755E800FF00E6 /* MockRestaurantService.swift */; };
+		98FBB2E22A5756C000FF00E6 /* RestaurantViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBB2E12A5756C000FF00E6 /* RestaurantViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +57,6 @@
 		9878F30F2A56988500DC7850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9878F3122A56988500DC7850 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9878F3182A56988600DC7850 /* ChowNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChowNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9878F31C2A56988600DC7850 /* ChowNowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChowNowTests.swift; sourceTree = "<group>"; };
 		9878F3222A56988600DC7850 /* ChowNowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChowNowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9878F3262A56988600DC7850 /* ChowNowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChowNowUITests.swift; sourceTree = "<group>"; };
 		9878F3282A56988600DC7850 /* ChowNowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChowNowUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -77,6 +77,8 @@
 		98FBB2CF2A56E5D800FF00E6 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		98FBB2D52A5715D200FF00E6 /* LocationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewModel.swift; sourceTree = "<group>"; };
 		98FBB2D72A571F8100FF00E6 /* AnnotationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationData.swift; sourceTree = "<group>"; };
+		98FBB2DF2A5755E800FF00E6 /* MockRestaurantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestaurantService.swift; sourceTree = "<group>"; };
+		98FBB2E12A5756C000FF00E6 /* RestaurantViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +151,8 @@
 		9878F31B2A56988600DC7850 /* ChowNowTests */ = {
 			isa = PBXGroup;
 			children = (
-				9878F31C2A56988600DC7850 /* ChowNowTests.swift */,
+				98FBB2DE2A5755BE00FF00E6 /* Restaurant */,
+				98FBB2DB2A5755AA00FF00E6 /* Mock */,
 			);
 			path = ChowNowTests;
 			sourceTree = "<group>";
@@ -321,6 +324,22 @@
 			path = LocationDetail;
 			sourceTree = "<group>";
 		};
+		98FBB2DB2A5755AA00FF00E6 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				98FBB2DF2A5755E800FF00E6 /* MockRestaurantService.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		98FBB2DE2A5755BE00FF00E6 /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				98FBB2E12A5756C000FF00E6 /* RestaurantViewModelTests.swift */,
+			);
+			path = Restaurant;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -395,6 +414,7 @@
 					};
 					9878F3172A56988600DC7850 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 						TestTargetID = 9878F3072A56988400DC7850;
 					};
 					9878F3212A56988600DC7850 = {
@@ -482,7 +502,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9878F31D2A56988600DC7850 /* ChowNowTests.swift in Sources */,
+				98FBB2E02A5755E800FF00E6 /* MockRestaurantService.swift in Sources */,
+				98FBB2E22A5756C000FF00E6 /* RestaurantViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +716,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J95SPSM87P;
@@ -704,6 +726,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Vicxruiz.ChowNowTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChowNow.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChowNow";
@@ -715,6 +738,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J95SPSM87P;

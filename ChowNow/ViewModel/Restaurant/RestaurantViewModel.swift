@@ -93,6 +93,7 @@ final class RestaurantViewModel: ObservableObject {
                     )
                 }
             case .success(let response):
+                print("///response: \(response)")
                 self.configureAndOutputSectionConfigs(response)
             }
         }
