@@ -12,3 +12,4 @@ Podfile.lock
 ## User settings
 xcuserdata/
 xcshareddata/
+*.xcuserstate
