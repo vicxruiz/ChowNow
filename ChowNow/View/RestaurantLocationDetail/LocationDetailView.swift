@@ -33,6 +33,8 @@ struct LocationDetailView: View {
                 Section(Strings.LocationDetail.cuisines) {
                     ForEach(viewModel.location.cuisines, id: \.self) { cuisine in
                         Text(cuisine)
+                            .font(.headline)
+                            .foregroundStyle(Color.squidInk)
                     }
                 }
                 Section(Strings.LocationDetail.pickup) {
@@ -68,12 +70,17 @@ struct LocationDetailView: View {
             Text(viewModel.location.name)
                 .font(.headline)
                 .fontWeight(.bold)
+                .foregroundStyle(Color.squidInk)
             Text(viewModel.location.address.formattedAddress)
                 .font(.subheadline)
-                .fontWeight(.semibold)
-            Text("Call: \(viewModel.location.phone)")
-                .font(.subheadline)
-                .fontWeight(.semibold)
+                .foregroundStyle(Color.squidInk)
+            HStack(spacing: Layout.pd25) {
+                Text("Call: ")
+                    .font(.subheadline)
+                Text(viewModel.location.phone)
+                    .font(.subheadline)
+                    .foregroundStyle(Color.frosting)
+            }
         }
     }
     
@@ -86,6 +93,7 @@ struct LocationDetailView: View {
                     VStack(alignment: .leading) {
                         Text(dayOfWeek)
                             .font(.headline)
+                            .foregroundStyle(Color.squidInk)
                             .padding(.vertical, Layout.pd25)
                         
                         ForEach(ranges, id: \.self) { timeRange in

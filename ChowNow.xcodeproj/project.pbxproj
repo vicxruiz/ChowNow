@@ -32,6 +32,7 @@
 		98FBB2D82A571F8200FF00E6 /* AnnotationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBB2D72A571F8100FF00E6 /* AnnotationData.swift */; };
 		98FBB2E02A5755E800FF00E6 /* MockRestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBB2DF2A5755E800FF00E6 /* MockRestaurantService.swift */; };
 		98FBB2E22A5756C000FF00E6 /* RestaurantViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBB2E12A5756C000FF00E6 /* RestaurantViewModelTests.swift */; };
+		98FBB2E42A575BF500FF00E6 /* Extension+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBB2E32A575BF500FF00E6 /* Extension+Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		98FBB2D72A571F8100FF00E6 /* AnnotationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationData.swift; sourceTree = "<group>"; };
 		98FBB2DF2A5755E800FF00E6 /* MockRestaurantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestaurantService.swift; sourceTree = "<group>"; };
 		98FBB2E12A5756C000FF00E6 /* RestaurantViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModelTests.swift; sourceTree = "<group>"; };
+		98FBB2E32A575BF500FF00E6 /* Extension+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Colors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 		9878F3442A56A3DD00DC7850 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				98FBB2E32A575BF500FF00E6 /* Extension+Colors.swift */,
 				9878F3572A56A8F100DC7850 /* ChowNow+Extensions.swift */,
 			);
 			path = Extensions;
@@ -490,6 +493,7 @@
 				98FBB2D82A571F8200FF00E6 /* AnnotationData.swift in Sources */,
 				9878F36A2A56B2E900DC7850 /* RestaurantViewController.swift in Sources */,
 				98FBB2D02A56E5D800FF00E6 /* LocationDetailView.swift in Sources */,
+				98FBB2E42A575BF500FF00E6 /* Extension+Colors.swift in Sources */,
 				9878F3492A56A42100DC7850 /* StatefulViewController.swift in Sources */,
 				9878F3582A56A8F100DC7850 /* ChowNow+Extensions.swift in Sources */,
 				9878F3682A56B2B100DC7850 /* RestaurantControllerRepresentable.swift in Sources */,

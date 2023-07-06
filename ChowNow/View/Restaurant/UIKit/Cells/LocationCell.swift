@@ -24,7 +24,7 @@ final class LocationCell: BaseCell {
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .headline)
-        label.textColor = .darkGray
+        label.textColor = UIColor.squidInk
         return label
     }()
 
@@ -36,11 +36,34 @@ final class LocationCell: BaseCell {
         return label
     }()
 
-    private lazy var phoneLabel: UILabel = {
+    private lazy var callLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: Layout.pd75)
         label.textColor = .darkGray
         return label
+    }()
+    
+    private lazy var digitLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: Layout.pd75)
+        label.textColor = UIColor.frosting
+        return label
+    }()
+    
+    private lazy var phoneNumberStackView: UIStackView = {
+       let stackView = UIStackView(
+            arrangedSubviews: [
+                callLabel,
+                digitLabel,
+                UIView()
+            ],
+            axis: .horizontal,
+            spacing: Layout.pd25
+        )
+        
+        stackView.distribution = .fill
+        
+        return stackView
     }()
 
     private lazy var dividerLineView: UIView = {
@@ -55,7 +78,7 @@ final class LocationCell: BaseCell {
                 nameLabel,
                 addressLabel,
                 dividerLineView,
-                phoneLabel
+                phoneNumberStackView
             ],
             axis: .vertical,
             spacing: Layout.pd50
@@ -95,7 +118,7 @@ final class LocationCell: BaseCell {
         super.prepareForReuse()
         nameLabel.text = nil
         addressLabel.text = nil
-        phoneLabel.text = nil
+        digitLabel.text = nil
     }
     
     // MARK: - Public Methods
@@ -105,7 +128,8 @@ final class LocationCell: BaseCell {
     func set(_ location: Location) {
         nameLabel.text = location.name
         addressLabel.text = location.address.formattedAddress
-        phoneLabel.text = "Call Now: \(location.phone)"
+        callLabel.text = "Call: "
+        digitLabel.text = "\(location.phone)"
     }
 
     // MARK: - Private Helpers

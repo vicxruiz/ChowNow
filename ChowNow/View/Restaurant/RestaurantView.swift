@@ -13,6 +13,14 @@ struct RestaurantView: View {
         makeBody()
     }
     
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.gojiBerry]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.gojiBerry]
+        
+        let backButtonAppearance = UIBarButtonItem.appearance()
+        backButtonAppearance.tintColor = UIColor.gojiBerry
+    }
+    
     func makeBody() -> some View {
         NavigationStack {
             VStack {
