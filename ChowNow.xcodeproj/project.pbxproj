@@ -33,6 +33,7 @@
 		98FBB2E02A5755E800FF00E6 /* MockRestaurantService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBB2DF2A5755E800FF00E6 /* MockRestaurantService.swift */; };
 		98FBB2E22A5756C000FF00E6 /* RestaurantViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBB2E12A5756C000FF00E6 /* RestaurantViewModelTests.swift */; };
 		98FBB2E42A575BF500FF00E6 /* Extension+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBB2E32A575BF500FF00E6 /* Extension+Colors.swift */; };
+		98FBB2E82A5767C200FF00E6 /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 98FBB2E72A5767C200FF00E6 /* screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		98FBB2DF2A5755E800FF00E6 /* MockRestaurantService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestaurantService.swift; sourceTree = "<group>"; };
 		98FBB2E12A5756C000FF00E6 /* RestaurantViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModelTests.swift; sourceTree = "<group>"; };
 		98FBB2E32A575BF500FF00E6 /* Extension+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Colors.swift"; sourceTree = "<group>"; };
+		98FBB2E72A5767C200FF00E6 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		9878F2FF2A56988400DC7850 = {
 			isa = PBXGroup;
 			children = (
+				98FBB2E72A5767C200FF00E6 /* screenshot.png */,
 				9878F30A2A56988400DC7850 /* ChowNow */,
 				9878F31B2A56988600DC7850 /* ChowNowTests */,
 				9878F3252A56988600DC7850 /* ChowNowUITests */,
@@ -455,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9878F3132A56988500DC7850 /* Preview Assets.xcassets in Resources */,
+				98FBB2E82A5767C200FF00E6 /* screenshot.png in Resources */,
 				9878F3102A56988500DC7850 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
