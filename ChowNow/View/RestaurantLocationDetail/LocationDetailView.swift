@@ -22,27 +22,25 @@ struct LocationDetailView: View {
     }
     
     var body: some View {
-        VStack {
-            List {
-                Section {
-                    mapView
-                }
-                Section(Strings.LocationDetail.about) {
-                    aboutView
-                }
-                Section(Strings.LocationDetail.cuisines) {
-                    ForEach(viewModel.location.cuisines, id: \.self) { cuisine in
-                        Text(cuisine)
-                            .font(.headline)
-                            .foregroundStyle(Color.squidInk)
-                    }
-                }
-                Section(Strings.LocationDetail.pickup) {
-                    pickupView
+        List {
+            Section {
+                mapView
+            }
+            Section(Strings.LocationDetail.about) {
+                aboutView
+            }
+            Section(Strings.LocationDetail.cuisines) {
+                ForEach(viewModel.location.cuisines, id: \.self) { cuisine in
+                    Text(cuisine)
+                        .font(.headline)
+                        .foregroundStyle(Color.squidInk)
                 }
             }
-            .listStyle(.insetGrouped)
+            Section(Strings.LocationDetail.pickup) {
+                pickupView
+            }
         }
+        .listStyle(.insetGrouped)
         .onReceive(viewModel.$region.map { $0 }, perform: { result in
             region = result
         })
@@ -94,7 +92,7 @@ struct LocationDetailView: View {
                         Text(dayOfWeek)
                             .font(.headline)
                             .foregroundStyle(Color.squidInk)
-                            .padding(.vertical, Layout.pd25)
+                            .padding(.vertical, Layout.pd50)
                         
                         ForEach(ranges, id: \.self) { timeRange in
                             Text("\(timeRange.from) - \(timeRange.to)")
@@ -104,7 +102,6 @@ struct LocationDetailView: View {
                     }
                 }
             }
-            .padding(.horizontal, Layout.pd100)
         }
     }
 }

@@ -44,8 +44,6 @@ final class RestaurantService: RestaurantRepository {
     ///   - completion: The completion block that returns the result of the restaurant data fetch.
     func fetchRestaurant(for id: Int, completion: @escaping (Result<RestaurantResponse, Error>) -> Void) {
         let url = APIEndpoint.restaurant(id: id).url
-        
-        print(url)
 
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
