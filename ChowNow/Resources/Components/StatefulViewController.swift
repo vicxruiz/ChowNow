@@ -82,6 +82,7 @@ class StatefulViewController: UIViewController {
 
     private func transitionToViewState(animated: Bool) {
         if case .error(let error) = viewState {
+            loadingView.isHidden = true
             showAlert(with: error)
             return
         }
