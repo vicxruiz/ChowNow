@@ -7,6 +7,13 @@
 
 import UIKit
 
+extension UIView {
+    convenience init(subview: UIView) {
+        self.init(frame: .zero)
+        self.addSubview(subview)
+    }
+}
+
 extension UIStackView {
     convenience init(arrangedSubviews: [UIView] = [],
                      axis: NSLayoutConstraint.Axis,
@@ -36,57 +43,18 @@ extension UIStackView {
     }
 }
 
-extension UITableView {
-    /// Dequeue reusable UITableViewCell using class name for indexPath.
-    ///
-    /// - Parameters:
-    ///   - name: UITableViewCell type.
-    ///   - indexPath: location of cell in tableView.
-    /// - Returns: UITableViewCell object with associated class name.
-    final func dequeueReusableCell<T: UITableViewCell>(withClass name: T.Type = T.self, for indexPath: IndexPath) -> T {
-        guard let cell = dequeueReusableCell(withIdentifier: String(describing: name), for: indexPath) as? T else {
+extension UICollectionView {
+    final func dequeueReusableCell<T: UICollectionViewCell>(withClass name: T.Type = T.self, for indexPath: IndexPath) -> T {
+        guard let cell = dequeueReusableCell(withReuseIdentifier: String(describing: name), for: indexPath) as? T else {
             fatalError(
-                "Couldn't find UITableViewCell for \(String(describing: name)), make sure the cell" +
-                " is registered with table view."
+                "Couldn't find UITableViewCell for \(String(describing: name)), make sure the" +
+                " cell is registered with table view"
             )
         }
         return cell
     }
 
-    /// Register reusable UITableViewCell using class name for reuseID.
-    ///
-    /// - Parameters:
-    ///     - cellType: UITableViewCell type
-    final func register<T: UITableViewCell>(cellType: T.Type) {
-        register(cellType, forCellReuseIdentifier: String(describing: cellType))
-    }
-}
-
-import SwiftUI
-
-extension View {
-    
-    /// Pushes a view to the navigation stack.
-    ///
-    /// - Parameters:
-    ///   - isActive: Whether the navigation link is active.
-    ///   - content: The content to be pushed.
-    ///
-    func push<Content: View>(
-        isActive: Binding<Bool>,
-        @ViewBuilder to content: () -> Content
-    ) -> some View {
-        ZStack {
-            self
-            SwiftUI.NavigationLink(
-                isActive: isActive
-            ) {
-                content()
-            } label: {
-                Text("Push View")
-            }
-            .isDetailLink(false)
-            .hidden()
-        }
+    final func register<T: UICollectionViewCell>(cellType: T.Type) {
+        register(cellType, forCellWithReuseIdentifier: String(describing: cellType))
     }
 }
