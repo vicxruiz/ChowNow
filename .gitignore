@@ -1,3 +1,14 @@
 
 ChowNow.xcodeproj/project.xcworkspace/xcuserdata/victorruiz.xcuserdatad/UserInterfaceState.xcuserstate
 *.xcuserstate
+
+Pods/
+
+.DS_Store
+
+Package.resolved
+Podfile.lock
+
+## User settings
+xcuserdata/
+xcshareddata/
