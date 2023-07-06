@@ -8,8 +8,18 @@
 import Foundation
 
 struct Strings {
-    enum Errors {
+    struct Errors {
         static let tryAgain = "Please try again."
-        static let networkError = "Unable to load data"
+        static let unableToLoad = "Unable to load data"
+    }
+    
+    struct Locations {
+        static let locations = "Locations"
+    }
+    
+    struct LocationDetail {
+        static let about = "About"
+        static let cuisines = "Cuisines"
+        static let pickup = "Pickup"
     }
 }
