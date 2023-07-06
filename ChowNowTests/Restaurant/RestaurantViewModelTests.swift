@@ -46,7 +46,7 @@ final class RestaurantViewModelTests: XCTestCase {
 
     // MARK: - Inputs
     
-    func testMealListViewModel_viewDidLoad() {
+    func testRestaurantViewModel_viewDidLoad() {
         // Create an array of expected values
         let expectedValues = [ViewState.loading, ViewState.content]
         
@@ -83,7 +83,7 @@ final class RestaurantViewModelTests: XCTestCase {
     }
 
     
-    func testMealListViewModel_didTapCell() throws {
+    func testRestaurantListViewModel_didTapCell() throws {
         viewModel.trigger(.didTapCell(.location(restaurantResponse.locations[0])))
         XCTAssertEqual(true, viewModel.showDetail)
     }
