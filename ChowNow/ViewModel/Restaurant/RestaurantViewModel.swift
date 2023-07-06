@@ -81,7 +81,9 @@ final class RestaurantViewModel: ObservableObject {
     private func fetchRestaurant(
         for id: Int
     ) {
-        restaurantRepository.fetchRestaurant(for: id) { result in
+        restaurantRepository.fetchRestaurant(for: id) { [weak self] result in
+            guard let self = self else { return }
+            
             switch result {
             case .failure(let error):
                 DispatchQueue.main.async {
