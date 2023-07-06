@@ -22,13 +22,13 @@ extension BaseError {
 
 /// The enumeration representing basic errors.
 enum BasicError: BaseError, Equatable {
-    case networkError
+    case basicError
     case custom(title: String?, message: String)
 
     var title: String? {
         switch self {
-        case .networkError:
-            return Strings.Errors.networkError
+        case .basicError:
+            return Strings.Errors.unableToLoad
         case .custom(let title, _):
             return title
         }
@@ -36,7 +36,7 @@ enum BasicError: BaseError, Equatable {
 
     var message: String {
         switch self {
-        case .networkError:
+        case .basicError:
             return Strings.Errors.tryAgain
         case .custom(_, let message):
             return message
